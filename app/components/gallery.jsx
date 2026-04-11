@@ -34,16 +34,16 @@ export default function Gallery() {
   ];
 
   return (
-    <section className="min-h-screen flex items-center justify-center py-32 bg-[#F5F1EA]">
+    <section className="min-h-screen flex items-center justify-center  py-32 bg-[#F5F1EA]">
       <div className="max-w-[124rem] mx-auto px-4 py-16 w-full">
 
         {/* HEADER */}
-        <div className="text-center mb-20">
+        <div className="text-center max-[500px]:!mb-5 mb-15">
           <p className="text-sm tracking-[0.3em] text-[#6E1F2A] mb-4">
             GALERIE
           </p>
 
-          <h2 className="text-4xl md:text-5xl mb-6">
+          <h2 className="text-4xl md:text-5xl mb-4">
             Découvrez notre salle
           </h2>
 
