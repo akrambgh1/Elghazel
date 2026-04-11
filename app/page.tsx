@@ -1,5 +1,43 @@
 import Gallery from "./components/gallery.jsx";
-
+ export const metadata = {
+   title: "Salle Elghazel — Salle de Mariage Élégante à Alger",
+   description:
+     "Depuis 2017, Salle Elghazel vous accueille pour vos mariages et événements avec une expérience haut de gamme : salle, restauration, DJ et organisation complète.",
+ 
+   keywords: [
+     "salle mariage Alger",
+     "salle des fêtes Alger",
+     "location salle mariage Alger",
+     "salle mariage luxe Alger",
+     "Salle Elghazel"
+   ],
+ 
+   openGraph: {
+     title: "Salle Elghazel — Mariages & Événements",
+     description:
+       "Un lieu élégant pour des mariages inoubliables à Alger. Réservez dès maintenant.",
+     url: "https://your-domain.com",
+     siteName: "Salle Elghazel",
+     images: [
+       {
+         url: "/hero2.jpg", // MUST be in /public
+         width: 1200,
+         height: 630,
+         alt: "Salle Elghazel mariage",
+       },
+     ],
+     locale: "fr_FR",
+     type: "website",
+   },
+ 
+   twitter: {
+     card: "summary_large_image",
+     title: "Salle Elghazel — Mariage à Alger",
+     description:
+       "Salle élégante pour vos événements avec service complet.",
+     images: ["/hero2.jpg"],
+   },
+ };
 export default function Home() {
   return (
     <main className="bg-white text-gray-800 font-light">
