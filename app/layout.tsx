@@ -13,6 +13,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
+   icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180" },
+    ],
+    shortcut: "/favicon-32x32.png",
+  },
+  manifest: "/site.webmanifest",
    title: "Salle Elghazel — Salle de Mariage Élégante à Alger",
    description:
      "Depuis 2017, Salle Elghazel vous accueille pour vos mariages et événements avec une expérience haut de gamme : salle, restauration, DJ et organisation complète.",
@@ -61,7 +72,9 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+
     >
+      
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

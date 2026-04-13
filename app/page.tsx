@@ -1,5 +1,9 @@
 import Gallery from "./components/gallery.jsx";
 
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { MdOutlineLocalPhone } from "react-icons/md";
+import { PiChefHatThin } from "react-icons/pi";
  
 export default function Home() {
   return (
@@ -26,11 +30,11 @@ export default function Home() {
           </p>
 
           <div className="flex justify-center gap-6">
-            <a href="https://wa.me/213550226811" className="px-10 py-4 bg-white text-black">
-              Réserver
+            <a href="https://wa.me/213550226811" className="px-10 py-4 bg-[#6E1F2A] text-white">
+              obtenir un devis
             </a>
 
-            <a href="tel:+213550226811" className="px-10 py-4 border border-white">
+            <a href="tel:+213550226811" className="px-10 py-4 border font-bold border-white">
               Appeler
             </a>
           </div>
@@ -61,15 +65,17 @@ export default function Home() {
             <li>• Tables confortables</li>
             <li>• Décoration élégante</li>
             <li>• Atmosphère accueillante</li>
+            <li>• Capacité totale : jusqu’à 400 personnes (180 femmes / 220 hommes)</li>
+
           </ul>
         </div>
 
-        <div className="relative group">
+        <div className="relative  group">
           <div className="absolute inset-0 bg-[#C9A45C]/20 blur-2xl opacity-0 group-hover:opacity-100 transition"></div>
 
           <img
-            src="/hero2.jpg"
-            className="relative rounded-2xl shadow-xl group-hover:scale-[1.02] transition duration-500"
+            src="/secttion2.2jpeg.jpeg"
+            className="relative  rounded-2xl h-full shadow-xl group-hover:scale-[1.02] transition duration-500"
           />
         </div>
 
@@ -82,7 +88,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-[#C9A45C]/20 blur-2xl opacity-0 group-hover:opacity-100 transition"></div>
 
           <img
-            src="/hero2.jpg"
+            src="/section3jpeg.jpeg"
             className="relative rounded-2xl shadow-xl group-hover:scale-[1.02] transition duration-500"
           />
         </div>
@@ -143,7 +149,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-[#C9A45C]/20 blur-2xl opacity-0 group-hover:opacity-100 transition"></div>
 
           <img
-            src="/hero2.jpg"
+            src="/section4.jpeg"
             className="relative rounded-2xl shadow-xl group-hover:scale-[1.02] transition duration-500"
           />
         </div>
@@ -218,9 +224,10 @@ export default function Home() {
         Une équipe professionnelle pour assurer le bon déroulement.
       </p>
 
-      <ul className="text-gray-500 space-y-1 text-sm">
-        <li>Staff qualifié</li>
-        <li>DJ & ambiance</li>
+            <ul className="text-gray-500 space-y-1 text-sm">
+              <li>Traiteur</li>
+        <li>Staff qualifié (serveur & serveuse)</li>
+        <li>DJ (femme) & ambiance</li>
         <li>Coordination événement</li>
       </ul>
     </div>
@@ -233,7 +240,54 @@ export default function Home() {
       <section className="">
         <Gallery />
       </section>
+{/* LOCATION */}
+<section className="py-28 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
 
+  {/* LEFT TEXT */}
+  <div>
+    <p className="text-sm tracking-[0.3em] text-[#6E1F2A] mb-4">
+      LOCALISATION
+    </p>
+
+    <h2 className="text-4xl md:text-5xl mb-6">
+      Un emplacement accessible et idéal
+    </h2>
+
+    <div className="h-[2px] w-16 bg-[#C9A45C] mb-6"></div>
+
+    <p className="text-gray-600 mb-6">
+      Située dans un quartier facilement accessible, Salle Elghazel offre
+      un emplacement pratique pour accueillir vos invités dans les meilleures
+      conditions.
+    </p>
+
+    <ul className="space-y-2 text-gray-600">
+      <li>• Accès facile</li>
+      <li>• Quartier calme</li>
+      <li>• Parking disponible</li>
+    </ul>
+
+    {/* OPTIONAL ADDRESS */}
+    <p className="mt-6 text-gray-500 text-sm">
+     193 Rue Tripoli,Bachdjerah, Alger, Algérie
+    </p>
+  </div>
+
+  {/* RIGHT MAP */}
+  <div className="relative group h-[400px] w-full">
+
+    <div className="absolute inset-0 bg-[#C9A45C]/20 blur-2xl opacity-0 group-hover:opacity-100 transition"></div>
+
+    <iframe
+      className="relative w-full h-full rounded-2xl shadow-xl"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.02611892412!2d3.126402876673646!3d36.731113177668256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128e529a9a466fb3%3A0x28cec012966f3268!2sSalle%20de%20d%C3%AEner%20elghazel!5e1!3m2!1sfr!2sdz!4v1775930859939!5m2!1sfr!2sdz"
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+
+  </div>
+
+</section>
       {/* CTA */}
       <section className="py-32 text-center bg-[#6E1F2A] text-white">
 
@@ -256,7 +310,62 @@ export default function Home() {
         </div>
 
       </section>
+ <footer className="bg-[#2f0e19] text-white ">
+      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
 
+        {/* Brand */}
+        <div>
+          <h2 className="text-2xl font-bold tracking-wide">
+Salle Elghazel
+          </h2>
+          <p className="mt-4 text-sm text-white/70 leading-relaxed">
+            Un espace élégant pour célébrer vos moments uniques
+
+Nous vous accueillons dans une salle de réception moderne et raffinée, conçue pour transformer chaque événement en souvenir inoubliable.
+          </p>
+        </div>
+
+        {/* Social Media */}
+        <div>
+          <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
+          <ul className="space-y-3 text-sm text-white/70">
+              <li><a href="https://www.facebook.com/profile.php?id=100066673505577">
+                <FaFacebook color="#ffff" size="1.5em" />
+              </a>
+            </li>
+              <li>
+                <a href="https://www.instagram.com/salle_elghazel2017?fbclid=IwY2xjawRJI1hleHRuA2FlbQIxMABicmlkETFkckFBWDFQTmpGSjNmRjJKc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHjN3-9zAsRmsSKAULLtL_JTePvI-56e_GZyxiVui6t2h9LIa4a8nPBmXkvMP_aem_G3uwJR15kOzt0Yn-ThfaUQ">
+              <FaInstagram color="#ffff" size="1.5em" /></a>
+            </li>
+              <li className="flex items-center gap-2">
+                <MdOutlineLocalPhone size="1.5em" />
+              <a href="tel:+213550226811" className="hover:text-white">
+                +213 550 226 811
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        {/* Services Contacts */}
+        <div>
+          <h3 className="text-lg font-semibold mb-4">Our Team</h3>
+          <ul className="space-y-3 text-sm text-white/70">
+            <li className="flex gap-2"><PiChefHatThin  size="1.5em" /> +213 XXX XXX XXX</li>
+            <li className="flex gap-2">DJ: +213 XXX XXX XXX</li>
+            <li className="flex gap-2">Cameraman: +213 XXX XXX XXX</li>
+          </ul>
+        </div>
+
+      </div>
+
+      {/* Bottom */}
+      <div className="border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-center text-xs text-white/50">
+          <p>© {new Date().getFullYear()} Your Business Name. All rights reserved.</p>
+          
+        </div>
+      </div>
+    </footer>
     </main>
   );
 }

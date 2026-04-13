@@ -13,12 +13,28 @@ import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 
 // images
 import slide_image_1 from './assets/images/img_1.jpg';
-import slide_image_2 from './assets/images/img_1.jpg';
-import slide_image_3 from './assets/images/img_1.jpg';
-import slide_image_4 from './assets/images/img_1.jpg';
-import slide_image_5 from './assets/images/img_1.jpg';
-import slide_image_6 from './assets/images/img_1.jpg';
-import slide_image_7 from './assets/images/img_1.jpg';
+import slide_image_2 from './assets/images/im_2.jpeg';
+import slide_image_3 from './assets/images/img_3.jpeg';
+import slide_image_4 from './assets/images/img_4.jpeg';
+import slide_image_5 from './assets/images/im_5.jpeg';
+import slide_image_6 from './assets/images/img_6.jpeg';
+import slide_image_7 from './assets/images/img_7.jpeg';
+import slide_image_8 from './assets/images/img_8.jpeg';
+import slide_image_9 from './assets/images/img_9.jpeg';
+import slide_image_10 from './assets/images/img_10.jpeg';
+import slide_image_11 from './assets/images/img_11.jpeg';
+import slide_image_12 from './assets/images/img_12.jpeg';
+import slide_image_13 from './assets/images/img_13.jpeg';
+import slide_image_14 from './assets/images/img_14.jpeg';
+import slide_image_15 from './assets/images/img_15.jpeg';
+import slide_image_16 from './assets/images/img_16.jpeg';
+
+
+
+
+
+
+
 
 
 export default function Gallery() {
@@ -31,6 +47,20 @@ export default function Gallery() {
     slide_image_5,
     slide_image_6,
     slide_image_7,
+    slide_image_8,
+    slide_image_9,
+    slide_image_10,
+    slide_image_11,
+    slide_image_12,
+    slide_image_13,
+    slide_image_14,
+    slide_image_15,
+    slide_image_16,
+
+
+
+
+
   ];
 
   return (
@@ -72,7 +102,7 @@ export default function Gallery() {
             prevEl: '.swiper-prev',
           }}
           modules={[EffectCoverflow, Pagination, Navigation]}
-          className="relative  py-8 w-[60rem] max-[500px]:!w-[20rem]"
+          className="relative  py-8 w-[72rem] max-[500px]:!w-[20rem]"
         >
 
           {images.map((img, i) => (
