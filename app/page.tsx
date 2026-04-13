@@ -361,7 +361,7 @@ Nous vous accueillons dans une salle de réception moderne et raffinée, conçue
         <div>
           <h3 className="text-lg font-semibold mb-4">Our Team</h3>
           <ul className="space-y-6 text-m text-white/70">
-            <a href="tel:+2130552428473" className="hover:text-white "><li className="flex gap-2"><PiChefHatThin  size="1.5em" /> +213 5 52428473</li></a>
+            <a href="tel:+2130552428473" className="hover:text-white "><li className="flex gap-2"><PiChefHatThin  size="1.5em" />chef: +213 5 52428473</li></a>
           <a href="tel:+213550138081" className="hover:text-white"> <li className="flex gap-2">DJ: +213 5 50138081</li></a> 
             <a href="tel:+213559860262" className="hover:text-white"><li className="flex gap-2">Cameraman: +213 5 59860262</li></a>
           </ul>
@@ -371,11 +371,12 @@ Nous vous accueillons dans une salle de réception moderne et raffinée, conçue
 
       {/* Bottom */}
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-center text-xs text-white/50">
-          <p>© {new Date().getFullYear()} Your Business Name. All rights reserved.</p>
-          
-        </div>
-      </div>
+  <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-center items-center text-xs text-white/50 text-center">
+    
+    <p>© {new Date().getFullYear()} Salle Elghazel. All rights reserved.</p>
+
+  </div>
+</div>
     </footer>
     </main>
   );
