@@ -29,14 +29,6 @@ import slide_image_14 from './assets/images/img_14.jpeg';
 import slide_image_15 from './assets/images/img_15.jpeg';
 import slide_image_16 from './assets/images/img_16.jpeg';
 
-
-
-
-
-
-
-
-
 export default function Gallery() {
 
   const images = [
@@ -56,19 +48,15 @@ export default function Gallery() {
     slide_image_14,
     slide_image_15,
     slide_image_16,
-
-
-
-
-
   ];
 
   return (
-    <section className="min-h-screen flex items-center justify-center  py-32 bg-[#F5F1EA]">
+    <section className="min-h-screen flex items-center justify-center py-32 bg-[#F5F1EA] overflow-x-hidden">
+      
       <div className="max-w-[124rem] mx-auto px-4 py-16 w-full">
 
         {/* HEADER */}
-        <div className="text-center max-[500px]:!mb-5 mb-15">
+        <div className="text-center mb-10">
           <p className="text-sm tracking-[0.3em] text-[#6E1F2A] mb-4">
             GALERIE
           </p>
@@ -102,49 +90,43 @@ export default function Gallery() {
             prevEl: '.swiper-prev',
           }}
           modules={[EffectCoverflow, Pagination, Navigation]}
-          className="relative  py-8 w-[72rem] max-[500px]:!w-[20rem]"
+          className="relative py-8 w-full max-w-[72rem] mx-auto"
         >
 
           {images.map((img, i) => (
             <SwiperSlide
               key={i}
-              className="!w-[30rem] !h-[32rem] max-[500px]:!w-[28rem] max-[500px]:!h-[36rem]"
+              className="!w-[80%] sm:!w-[24rem] lg:!w-[30rem] !h-[32rem]"
             >
               <Image
                 src={img}
                 alt={`slide-${i}`}
                 width={800}
                 height={600}
-                className="w-full h-full rounded-[0.5rem] object-cover"
+                className="w-full h-full rounded-lg object-cover"
               />
             </SwiperSlide>
           ))}
 
-          {/* Controls */}
-<div className="custom-pagination flex justify-center gap-2 mt-10"></div>
+          {/* Pagination */}
+          <div className="custom-pagination flex justify-center gap-2 mt-10"></div>
 
-         <div className="flex justify-center items-center gap-8 mt-10">
+          {/* Navigation */}
+          <div className="flex justify-center items-center gap-8 mt-10">
+            <button className="swiper-prev w-12 h-12 flex items-center justify-center rounded-full border border-gray-300 hover:bg-[#6E1F2A] hover:text-white transition">
+              ←
+            </button>
 
-          <button className="swiper-prev w-12 h-12 flex items-center justify-center rounded-full border border-gray-300 hover:bg-[#6E1F2A] hover:text-white transition">
-            ←
-          </button>
-
-          <button className="swiper-next w-12 h-12 flex items-center justify-center rounded-full border border-gray-300 hover:bg-[#6E1F2A] hover:text-white transition">
-            →
-          </button>
-
-        </div>
-
-        {/* MINI LINE PAGINATION */}
-
-        
-
+            <button className="swiper-next w-12 h-12 flex items-center justify-center rounded-full border border-gray-300 hover:bg-[#6E1F2A] hover:text-white transition">
+              →
+            </button>
+          </div>
 
         </Swiper>
 
       </div>
 
-      {/* 🎨 CLEAN LINE PAGINATION STYLE */}
+      {/* Pagination Style */}
       <style jsx global>{`
         .custom-pagination .swiper-pagination-bullet {
           width: 28px;
@@ -160,6 +142,7 @@ export default function Gallery() {
           background: #c9a45c;
         }
       `}</style>
+
     </section>
   );
 }

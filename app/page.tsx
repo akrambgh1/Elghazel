@@ -4,6 +4,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { MdOutlineLocalPhone } from "react-icons/md";
 import { PiChefHatThin } from "react-icons/pi";
+import { FaStar } from "react-icons/fa6";
  
 export default function Home() {
   return (
@@ -20,7 +21,9 @@ export default function Home() {
         <div className="absolute inset-0 bg-[#00000079]"></div>
 
         <div className="relative z-10 text-white px-6 max-w-3xl">
-
+          <div className="flex justify-center gap-1 text-[#C9A45C] mb-4">
+           <FaStar size="1.5em" /><FaStar size="1.5em"  /><FaStar size="1.5em"  /><FaStar size="1.5em" /></div>
+           <span>Bienvenue à </span>
           <h1 className="text-5xl md:text-7xl mb-6  tracking-wide">
             Salle Elghazel
           </h1>
@@ -43,43 +46,51 @@ export default function Home() {
       </section>
 
       {/* SECTION 1 */}
-      <section className="py-28 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+     <section className="py-28 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
 
-        <div>
-          <p className="text-sm tracking-[0.3em] text-[#6E1F2A] mb-4">
-            ESPACE RÉCEPTION
-          </p>
+  {/* TEXT */}
+  <div>
+    <p className="text-sm tracking-[0.3em] text-[#6E1F2A] mb-4">
+      ESPACE RÉCEPTION
+    </p>
 
-          <h2 className="text-4xl md:text-5xl mb-6">
-            Un cadre élégant pour vos invités
-          </h2>
+    <h2 className="text-4xl md:text-5xl mb-6">
+      Un cadre élégant pour vos invités
+    </h2>
 
-          <div className="h-[2px] w-16 bg-[#C9A45C] mb-6"></div>
+    <div className="h-[2px] w-16 bg-[#C9A45C] mb-6"></div>
 
-          <p className="text-gray-600 mb-6">
-            Une salle spacieuse et harmonieuse, conçue pour accueillir vos invités
-            dans une ambiance raffinée et chaleureuse.
-          </p>
+    <p className="text-gray-600 mb-6">
+      Une salle spacieuse et harmonieuse, conçue pour accueillir vos invités
+      dans une ambiance raffinée et chaleureuse.
+    </p>
 
-          <ul className="space-y-2 text-gray-600">
-            <li>• Tables confortables</li>
-            <li>• Décoration élégante</li>
-            <li>• Atmosphère accueillante</li>
-            <li>• Capacité totale : jusqu’à 400 personnes (180 femmes / 220 hommes)</li>
+    <ul className="space-y-2 text-gray-600">
+      <li>• Tables confortables</li>
+      <li>• Décoration élégante</li>
+      <li>• Atmosphère accueillante</li>
+      <li>• Capacité totale : jusqu’à 400 personnes (180 femmes / 220 hommes)</li>
+    </ul>
+  </div>
 
-          </ul>
-        </div>
+  {/* IMAGE */}
+  <div className="relative group">
 
-        <div className="relative  group">
-          <div className="absolute inset-0 bg-[#C9A45C]/20 blur-2xl opacity-0 group-hover:opacity-100 transition"></div>
+    {/* glow effect */}
+    <div className="absolute inset-0 bg-[#C9A45C]/20 blur-2xl opacity-0 group-hover:opacity-100 transition"></div>
 
-          <img
-            src="/secttion2.2jpeg.jpeg"
-            className="relative  rounded-2xl h-full shadow-xl group-hover:scale-[1.02] transition duration-500"
-          />
-        </div>
+    {/* image container (fixes stretching) */}
+    <div className="relative w-full aspect-[4/3] overflow-hidden rounded-2xl shadow-xl">
+      <img
+        src="/secttion2.2jpeg.jpeg"
+        alt="Salle de réception"
+        className="w-full h-full object-cover group-hover:scale-[1.02] transition duration-500"
+      />
+    </div>
 
-      </section>
+  </div>
+
+</section>
 
       {/* SECTION 2 */}
       <section className="py-28 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
@@ -349,10 +360,10 @@ Nous vous accueillons dans une salle de réception moderne et raffinée, conçue
         {/* Services Contacts */}
         <div>
           <h3 className="text-lg font-semibold mb-4">Our Team</h3>
-          <ul className="space-y-3 text-sm text-white/70">
-            <li className="flex gap-2"><PiChefHatThin  size="1.5em" /> +213 XXX XXX XXX</li>
-            <li className="flex gap-2">DJ: +213 XXX XXX XXX</li>
-            <li className="flex gap-2">Cameraman: +213 XXX XXX XXX</li>
+          <ul className="space-y-6 text-m text-white/70">
+            <a href="tel:+2130552428473" className="hover:text-white "><li className="flex gap-2"><PiChefHatThin  size="1.5em" /> +213 5 52428473</li></a>
+          <a href="tel:+213550138081" className="hover:text-white"> <li className="flex gap-2">DJ: +213 5 50138081</li></a> 
+            <a href="tel:+213559860262" className="hover:text-white"><li className="flex gap-2">Cameraman: +213 5 59860262</li></a>
           </ul>
         </div>
 
