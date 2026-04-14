@@ -5,7 +5,7 @@ import { FaInstagram } from "react-icons/fa";
 import { MdOutlineLocalPhone } from "react-icons/md";
 import { PiChefHatThin } from "react-icons/pi";
 import { FaStar } from "react-icons/fa6";
-import LangSwitch from "./components/LangSwitch.tsx";
+import LangSwitch from "./components/LangSwitch";
 
 export default function Home() {
   return (
