@@ -13,7 +13,11 @@ export const metadata: Metadata = {
   description: "قاعة الغزال - أفضل قاعة حفلات في الجزائر",
 };
 
-export default function ARLayout({ children }) {
+export default function ARLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <div dir="rtl" className="bg-white">
       {children}
