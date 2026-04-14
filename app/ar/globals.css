@@ -1,0 +1,7 @@
+:root {
+  --font-arabic: 'Noto Sans Arabic', sans-serif;
+}
+
+body {
+  font-family: var(--font-arabic);
+}

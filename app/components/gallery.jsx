@@ -29,7 +29,9 @@ import slide_image_14 from './assets/images/img_14.jpeg';
 import slide_image_15 from './assets/images/img_15.jpeg';
 import slide_image_16 from './assets/images/img_16.jpeg';
 
-export default function Gallery() {
+export default function Gallery({ lang = "fr" }) {
+
+  const isArabic = lang === "ar";
 
   const images = [
     slide_image_1,
@@ -52,17 +54,17 @@ export default function Gallery() {
 
   return (
     <section className="min-h-screen flex items-center justify-center py-32 bg-[#F5F1EA] overflow-x-hidden">
-      
+
       <div className="max-w-[124rem] mx-auto px-4 py-16 w-full">
 
         {/* HEADER */}
         <div className="text-center mb-10">
           <p className="text-sm tracking-[0.3em] text-[#6E1F2A] mb-4">
-            GALERIE
+            {isArabic ? "معرض الصور" : "GALERIE"}
           </p>
 
           <h2 className="text-4xl md:text-5xl mb-4">
-            Découvrez notre salle
+            {isArabic ? "اكتشف قاعتنا" : "Découvrez notre salle"}
           </h2>
 
           <div className="h-[2px] w-16 bg-[#C9A45C] mx-auto"></div>
@@ -75,6 +77,7 @@ export default function Gallery() {
           centeredSlides={true}
           loop={true}
           slidesPerView="auto"
+          dir={isArabic ? "rtl" : "ltr"}   // ✅ IMPORTANT FIX for Arabic
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
@@ -113,13 +116,15 @@ export default function Gallery() {
 
           {/* Navigation */}
           <div className="flex justify-center items-center gap-8 mt-10">
+
             <button className="swiper-prev w-12 h-12 flex items-center justify-center rounded-full border border-gray-300 hover:bg-[#6E1F2A] hover:text-white transition">
-              ←
+              {isArabic ? "→" : "←"}
             </button>
 
             <button className="swiper-next w-12 h-12 flex items-center justify-center rounded-full border border-gray-300 hover:bg-[#6E1F2A] hover:text-white transition">
-              →
+              {isArabic ? "←" : "→"}
             </button>
+
           </div>
 
         </Swiper>

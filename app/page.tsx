@@ -5,14 +5,17 @@ import { FaInstagram } from "react-icons/fa";
 import { MdOutlineLocalPhone } from "react-icons/md";
 import { PiChefHatThin } from "react-icons/pi";
 import { FaStar } from "react-icons/fa6";
- 
+import LangSwitch from "./components/LangSwitch.tsx";
+
 export default function Home() {
   return (
     <main className="bg-white text-gray-800 font-light">
-
+ 
       {/* HERO */}
       <section className="relative h-screen flex items-center justify-center text-center">
-
+      <div className="absolute bottom-6 left-6 z-50">
+  <LangSwitch />
+</div>
         <img
           src="/hero2.jpg"
           className="absolute inset-0 w-full h-full object-cover"
@@ -249,7 +252,7 @@ export default function Home() {
 
       {/* GALLERY */}
       <section className="">
-        <Gallery />
+        <Gallery  />
       </section>
 {/* LOCATION */}
 <section className="py-28 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
